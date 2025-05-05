@@ -16,7 +16,7 @@ This project builds a robust ETL pipeline using **Apache Airflow**, **PySpark**,
 - Uses upsert to maintain historical continuity while preventing duplication.
 
 ### 3. **Data Normalization and Insertion**
-- **Script**: `supabase_job_data_dag.py`
+- **Script**: `snormalise _and_insert_data.py`
 - Downloads `output.json` from Supabase.
 - Uses **PySpark** to normalize nested JSON structures and enforce schema (`dataframe_schema`).
 - Final output is converted to a list of Python dictionaries and inserted (or updated) into the `job_data` table in Supabase Postgres.
