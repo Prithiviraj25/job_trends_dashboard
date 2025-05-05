@@ -26,7 +26,7 @@ This project builds a robust ETL pipeline using **Apache Airflow**, **PySpark**,
 ## 🔁 DAGs & Scheduling
 
 - `fetch_jobs_dag` – Manually triggered or scheduled (e.g., every 10 mins) to fetch new job listings.
-- `supabase_job_data_dag` – Scheduled daily to normalize and insert data into the Supabase database.
+- `normalise _and_insert_data.py` – Scheduled daily to normalize and insert data into the Supabase database.
 
 ---
 
