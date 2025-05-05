@@ -52,3 +52,19 @@ This project builds a robust ETL pipeline using **Apache Airflow**, **PySpark**,
 ### Supabase Table: `job_data`
 - Schema aligned to normalized job attributes
 - Inserted via `upsert` using `id` as the conflict key
+## 🗃️ Supabase Table Schema: `job_data`
+
+| Column Name         | Data Type         | Nullable | Notes                                 |
+|---------------------|-------------------|----------|---------------------------------------|
+| `id`                | `text`            | ❌ No    | Primary key, job ID                   |
+| `title`             | `text`            | ✅ Yes   | Job title                             |
+| `company`           | `text`            | ✅ Yes   | Company name                          |
+| `location`          | `text`            | ✅ Yes   | Full location as string               |
+| `location_hierarchy`| `text[]`          | ✅ Yes   | Array of strings (hierarchy)          |
+| `category`          | `text`            | ✅ Yes   | Job category                          |
+| `salary_min`        | `double precision`| ✅ Yes   | Minimum salary                        |
+| `salary_max`        | `double precision`| ✅ Yes   | Maximum salary                        |
+| `salary_is_predicted`| `boolean`        | ✅ Yes   | Is salary predicted? (`true/false`)   |
+| `posted_date`       | `timestamptz`     | ✅ Yes   | ISO timestamp                         |
+| `description`       | `text`            | ✅ Yes   | Full description                      |
+| `url`               | `text`            | ✅ Yes   | Original job posting URL              |
